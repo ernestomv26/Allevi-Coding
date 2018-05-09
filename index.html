@@ -4,24 +4,25 @@
 <head>
     <meta charset="utf-8">
     <title>Allevi</title>
-
+    <!-- adds style to the header -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+    <!-- datatables package and stylesheets-->
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs4/jq-3.2.1/dt-1.10.16/b-1.5.1/b-html5-1.5.1/kt-2.3.2/sc-1.4.4/datatables.min.css"/>
-    <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
-
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.32/pdfmake.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.32/vfs_fonts.js"></script>
     <script type="text/javascript" src="https://cdn.datatables.net/v/bs4/jq-3.2.1/dt-1.10.16/b-1.5.1/b-html5-1.5.1/kt-2.3.2/sc-1.4.4/datatables.min.js"></script>
-
+    <!-- process the json and builds the table-->
+    <script src="scripts.js"></script>
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
+    <!-- nav bar header -->
     <nav>
         <div class="nav-wrapper">
             <a class="brand-logo">Allevi</a>
             <ul id="nav-mobile" class="right hide-on-med-and-down">
-                <li><input type="text" id="myInputTextField" placeholder="Search..."></li>
+                <li><input type="text" id="searchField" placeholder="Search..."></li>
             </ul>
         </div>
     </nav>
@@ -29,9 +30,7 @@
     <div id="loading">
         Loading table...
     </div>
-    <script src="scripts.js"></script>
-    <link rel="stylesheet" href="styles.css">
-    <table id="jsonTable" class="table table-hover">
-    </table>
+    <!-- table where the json data goes -->
+    <table id="jsonTable"></table>
 </body>
 </html>
